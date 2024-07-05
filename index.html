@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Table</title>
+    <title>Fruit Table v2</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
         table {
-            width: 100%;
+            width: 80%;
+            margin: 20px auto;
             border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+            padding: 12px;
+            text-align: center;
         }
         th {
             background-color: #f2f2f2;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
     </style>
 </head>
 <body>
-    <h2>Fruit Table</h2>
+    <h2>Fruit Table v2</h2>
     <table>
         <thead>
             <tr>
@@ -45,7 +61,21 @@
                 <td>Orange</td>
                 <td>Tangy</td>
             </tr>
-            <!-- Add more rows as needed -->
+            <tr>
+                <td>Grapes</td>
+                <td>Green/Red/Purple</td>
+                <td>Sweet/Sour</td>
+            </tr>
+            <tr>
+                <td>Strawberry</td>
+                <td>Red</td>
+                <td>Sweet/Tangy</td>
+            </tr>
+            <tr>
+                <td>Pineapple</td>
+                <td>Yellow</td>
+                <td>Sweet/Tangy</td>
+            </tr>
         </tbody>
     </table>
 </body>
