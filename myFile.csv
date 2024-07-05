@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# Prompt the user to enter their name and read the input
+echo "Enter your name:"
+read name
+echo "My name is $name"
+
+# Prompt the user with a predefined message and read the input
+read -p "Enter your name again: " NAME
+echo "My name is $NAME"
+
+# Arithmetic operations example
+a=10
+b=2
+# Multiply a and b and store the result in c
+let c=$a*$b
+# Print the result of an arithmetic expression
+echo "Multiplication of $a and $b is $c"
+
+# Example of conditional statements
+mark=55  # Example mark value for demonstration
+# Check the value of mark and print different messages based on conditions
+if [ "$mark" -gt 60 ]; then
+  echo "You passed with flying colors!"
+elif [ "$mark" -lt 10 ]; then
+  echo "You need to improve a lot!"
+elif [ "$mark" -eq 50 ]; then
+  echo "Your mark is exactly 50."
+else
+  echo "Your mark does not meet any specific condition."
+fi
+
+# Example of case statement
+case $mark in
+  10)
+    echo "You scored 10 marks."
+    ;;
+  20)
+    echo "You scored 20 marks."
+    ;;
+  *)
+    echo "You scored other than 10 or 20 marks."
+    ;;
+esac
+
+# Example of a while loop
+counter1=1
+while [ $counter1 -le 5 ]
+do
+  echo "Counter is at $counter1"
+  ((counter1++))
+done
+
+# Example of an until loop
+counter2=1
+until [ $counter2 -gt 5 ]
+do
+  echo "Counter is at $counter2"
+  ((counter2++))
+done
+
+# Example of a for loop
+for i in 1 2 3 4 5
+do 
+  echo "Number is $i"
+done
+
+# Example of a for loop iterating over command output (listing files)
+for file in $(ls)
+do 
+  echo "File: $file"
+done
